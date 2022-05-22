@@ -11,8 +11,12 @@ import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+  
+import {MatButtonModule} from '@angular/material/button';
 import * as material from '@angular/material';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +35,16 @@ import * as material from '@angular/material';
         }
     }),
     AppRoutingModule,
-    BrowserAnimationsModule, MatInputModule, FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    FormsModule,
+    MatIconModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule, 
+    MatInputModule, 
+    MatButtonModule,
+    MatToolbarModule
    
     
   ],
