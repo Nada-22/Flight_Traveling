@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import * as material from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FormsModule, 
     MatInputModule, 
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSelectModule
    
     
   ],

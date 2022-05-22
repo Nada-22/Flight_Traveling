@@ -12,7 +12,7 @@
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar> 
-<form class="example-form">
+<!-- <form class="example-form">
   <mat-form-field class="example-full-width">
     <mat-label>Name:</mat-label>
     <input matInput placeholder="Ex. Hardik" value="Hardik">
@@ -23,5 +23,42 @@
     <textarea matInput placeholder="Ex. 204, Sarvo, India"></textarea>
   </mat-form-field>
   
+</form> -->
+<!-- <form class="selectform" >
+  <h1>I want to travel to:</h1>
+  <mat-form-field appearance="fill" style="margin-left: 10px;margin-right:10px;">
+    <mat-label>select country</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>  
   <button mat-raised-button color="primary">Submit!</button>
-</form>
+</form> -->
+
+<h1 style="text-align: center;">I want to Travel :</h1>
+<div class="selectform">
+  <mat-form-field class="example-form-field" style=" margin-right: 20px; margin-left: 20px;"  appearance="fill">
+    <mat-label>From</mat-label>
+    <input #inputfrom matInput type="text" >
+    <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''"> -->
+    <!-- <mat-icon>close</mat-icon> -->
+  <!-- </button> -->
+</mat-form-field>
+<mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>To</mat-label>
+  <input #inputto matInput type="text" >
+  <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''"> -->
+    
+  <!-- </button> -->
+</mat-form-field>
+<button mat-raised-button color="primary" style="margin-left: 20px;" 
+routerLink="/flights/{{inputfrom.value}}/{{inputto.value}}">Submit!</button>
+</div>
+
+
+ <!-- <mat-form-field class="">
+  <mat-label>where</mat-label>
+  <input matInput placeholder="Ex. Hardik">
+</mat-form-field> -->
