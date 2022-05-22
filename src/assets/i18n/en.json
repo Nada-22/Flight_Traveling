@@ -1,0 +1,10 @@
+{
+	"demo": {
+		"text": "This is a simple demonstration app for ngx-translate",
+		"title": "Translation demo",
+        "user": {
+            "name": "Vladimir",
+            "age": 25
+        }
+	}
+}
