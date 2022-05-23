@@ -1,18 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import data from '../../../../assets/data/data.json';
-const ELEMENT_DATA = [
-  {name: 'Hydrogen'},
-  {name: 'Helium'},
-  {name: 'Lithium'},
-  {name: 'Beryllium'},
-  {name: 'Boron'},
-  {name: 'Carbon'},
-  {name: 'Nitrogen'},
-  {name: 'Oxygen'},
-  {name: 'Fluorine'},
-  {name: 'Neon'},
-];
+
 @Component({
   selector: 'app-avilableflights',
   templateUrl: './avilableflights.component.html',
@@ -24,7 +13,7 @@ export class AvilableflightsComponent implements OnInit {
   flights: any[] = [];
   displayedColumns: string[] = ['id', 'from', 'to', 'fare','departure','arreval'];
   columnsToDisplay: string[] = this.displayedColumns.slice();
-  data: any[] = this.flights;
+  // data: any[] = this.flights;
   public countryList:{from:string,to:string, fare:string}[] = data;
 
  
