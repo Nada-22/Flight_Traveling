@@ -7,7 +7,7 @@
     {"id":6,"from" : "Paris","to":"Banjul", "fare" : 400 ,"departure":"2am","arreval":"7am"},
     {"id":7,"from" : "Italy", "to": "Japan", "fare" : 300 ,"departure":"2am","arreval":"7am"},
     {"id":8,"from" : "Amsterdam","to": "Nigeria", "fare" : 500 ,"departure":"2am","arreval":"7am"},
-    {"id":9,"from" : "Oman", "to": "Qatar", "fare" : 280 ,"departure":"2am","arreval":"7am"},
+    {"id":9,"from" : "Oman", "to": "Qatar", "fare" : 280 ,"departure":"5am","arreval":"9am"},
     {"id":10,"from": "Moscow", "to" :"Colombo", "fare" : 390 ,"departure":"2am","arreval":"7am"},
     {"id":11,"from": "Oman","to":"Qatar", "fare" : 100 ,"departure":"2am","arreval":"7am"},
     {"id":15,"from": "Brazil","to":"Canada", "fare" : 800 ,"departure":"2am","arreval":"7am"},

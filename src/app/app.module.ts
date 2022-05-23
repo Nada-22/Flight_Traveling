@@ -17,7 +17,12 @@ import {MatButtonModule} from '@angular/material/button';
 import * as material from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
+import { MatBadgeModule } from '@angular/material/badge';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +51,13 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule, 
     MatButtonModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatMenuModule,
+    MatDatepickerModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatBadgeModule,
+    MatCardModule
    
     
   ],

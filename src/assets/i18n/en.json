@@ -3,8 +3,15 @@
 		"title": "Translation demo",
         "i": "i",
         "want": "xxxx",
-        "to": "to",
         "travel": "travel",
-        "I want to Travel": "I want to Travel"
+        "I want to Travel": "I want to Travel :",
+        "home": "home",
+        "about": "about",
+        "book": "book",
+        "help": "help",
+        "contact": "contact",
+        "Search!": "search",
+        "From": "from",
+        "To": "to"
 	}
 

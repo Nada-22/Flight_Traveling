@@ -1,60 +1,24 @@
-<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-<mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar> 
-<!-- <form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Name:</mat-label>
-    <input matInput placeholder="Ex. Hardik" value="Hardik">
-  </mat-form-field>
-  
-  <mat-form-field class="example-full-width">
-    <mat-label>Address:</mat-label>
-    <textarea matInput placeholder="Ex. 204, Sarvo, India"></textarea>
-  </mat-form-field>
-  
-</form> -->
-<!-- <form class="selectform" >
-  <h1>I want to travel to:</h1>
-  <mat-form-field appearance="fill" style="margin-left: 10px;margin-right:10px;">
-    <mat-label>select country</mat-label>
-    <mat-select [(ngModel)]="selectedValue" name="food">
-      <mat-option *ngFor="let food of foods" [value]="food.value">
-        {{food.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>  
-  <button mat-raised-button color="primary">Submit!</button>
-</form> -->
+<h1 style="text-align: center;" class="mt-3 pt-5">{{'I want to Travel'|translate }}</h1>
+<div class="d-flex justify-content-center p-5">
 
-<h1 style="text-align: center;">{{'I want to Travel'|translate }}:</h1>
-<div class="selectform">
-  <mat-form-field class="example-form-field" style=" margin-right: 20px; margin-left: 20px;"  appearance="fill">
-    <mat-label>From</mat-label>
-    <input #inputfrom matInput type="text" >
+  <div class="selectform">
+    <mat-form-field class="example-form-field" style=" margin-right: 20px; margin-left: 20px;"  appearance="fill">
+      <mat-label>{{'From'|translate}}</mat-label>
+      <input #inputfrom matInput type="text" >
+      <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''"> -->
+      <!-- <mat-icon>close</mat-icon> -->
+    <!-- </button> -->
+  </mat-form-field>
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>{{'To'|translate}}</mat-label>
+    <input #inputto matInput type="text" >
     <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''"> -->
-    <!-- <mat-icon>close</mat-icon> -->
-  <!-- </button> -->
-</mat-form-field>
-<mat-form-field class="example-form-field" appearance="fill">
-  <mat-label>To</mat-label>
-  <input #inputto matInput type="text" >
-  <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''"> -->
-    
-  <!-- </button> -->
-</mat-form-field>
-<button mat-raised-button color="primary" style="margin-left: 20px;" 
-routerLink="/flights/{{inputfrom.value}}/{{inputto.value}}">Submit!</button>
+      
+    <!-- </button> -->
+  </mat-form-field>
+  <button mat-raised-button color="primary" style="margin-left: 20px;" 
+  routerLink="/flights/{{inputfrom.value}}/{{inputto.value}}">{{'Search!'|translate}}</button>
+  </div>
 </div>
 
 

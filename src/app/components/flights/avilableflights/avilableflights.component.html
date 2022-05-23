@@ -1,43 +1,16 @@
-<!-- <div style="text-align:center">
-    <h2>
-        Country list from local json file...
-    </h2>
-    <ul *ngFor="let item of countryList">
-       <li>
-          <h3>Country Name :{{item.from}},to: {{item.to}}, fare: {{item.fare}}</h3>
-       </li>
-    </ul>
-</div> -->
 
+  <h1 style="text-align:center">Avilable Flights</h1>
+  <mat-card style="text-align:center" class="m-5" *ngFor="let flight of flights ">
+    <mat-card-title>Flight from {{flight.from}} To {{flight.to}} at:{{flight.departure}} </mat-card-title>
+    <mat-card-subtitle> Arreval at: {{flight.arreval}} </mat-card-subtitle>
+    <mat-card-subtitle> Ticket Cost: {{flight.fare|currency}} </mat-card-subtitle>
+    <mat-card-subtitle></mat-card-subtitle>
 
-<!-- <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <ng-container matColumnDef="name" *ngFor="let item of flights">
-      <mat-header-cell mat-header-cell *matHeaderCellDef> {{item.from}} </mat-header-cell>
-      <mat-cell mat-cell *matCellDef="let element"> {{element[item.from]}} </mat-cell>
-    </ng-container>
-  
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table> -->
-
-  <!-- <mat-card>
-    <mat-card-title>Actions Buttons</mat-card-title>
-    <mat-card-subtitle>Start</mat-card-subtitle>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+    <mat-card-actions align="end">
+      <button class="background text-white" routerLink="/flights/book/{{flight.id}}" mat-button>BOOK</button>
     </mat-card-actions>
   </mat-card>
-  <br> -->
-  <!-- <mat-card style="text-align:center" *ngFor="let item of flights ">
-    <mat-card-title> {{item.from}} To {{item.to}}</mat-card-title>
-    <mat-card-subtitle>End</mat-card-subtitle>
-    <mat-card-actions align="end">
-      <button mat-button>Like</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card> -->
-  <table mat-table [dataSource]="flights" class="mat-elevation-z8">
+  <!-- <table mat-table [dataSource]="flights" class="mat-elevation-z8">
 
 
 
@@ -48,4 +21,4 @@
   
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-  </table>
+  </table> -->

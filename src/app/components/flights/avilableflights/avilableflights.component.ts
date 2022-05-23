@@ -29,11 +29,6 @@ export class AvilableflightsComponent implements OnInit {
   }
   avilableFlights(country1: string, country2: string) {
     
-    // for (let i = 0; i < this.countryList.length; i++) { 
-    //   if (this.countryList[i].from == country1 && this.countryList[i].to == country2) {
-    //     this.flights.push(this.countryList[i].fare)
-    //   }
-    // }
   this.flights= data.filter((item: { from: string; to: string; }) => item.from === country1 && item.to === country2);
  console.log(this.flights);
  
