@@ -3,56 +3,76 @@
     <mat-card-header>
       <mat-card-title>{{'Passenger Information'|translate}}</mat-card-title>
     </mat-card-header>
-    
+
     <mat-card-content>
       <div class="row">
         <div class="col-md-7">
           <mat-form-field class="full-width">
-          
-            <input formControlName="PassengerName" matInput placeholder="{{'Enter your name'|translate}}">
+
+            <input formControlName="PassengerName" [class.is-invalid]="isInValidAndTouched('PassengerName')"
+              [class.is-valid]="isValidControl('PassengerName')" matInput placeholder="{{'Enter your name'|translate}}">
           </mat-form-field>
-          <span class="text-danger"
-          *ngIf="(name.touched || submitted) && name.errors?.['required']">
-          PassengerName is required
-        </span>
-      </div>
-      <div class="col-md-7">
-        <mat-form-field class="full-width">
-          <input  formControlName="PassengerPhone" matInput placeholder="{{'Enter phone Number'|translate}}">
-        </mat-form-field>
-        <span class="text-danger"
-        *ngIf="(phone.touched || submitted) && phone.errors?.['required']">
-        PassengerPhone is required
-      </span>
-    </div>
-    
-    <!-- <div class="row"> -->
+
+          <div *ngIf="isInValidAndTouched('PassengerName')">
+            <small class="form-text text-danger" *ngIf="isControlHasError('PassengerName','required')">
+              {{'PassengerName is required'|translate}} </small>
+            <small class="form-text text-danger" *ngIf="isControlHasError('PassengerName','minlength')">
+              {{'Min length is 3'|translate}}</small>
+            <small class="form-text text-danger" *ngIf="isControlHasError('PassengerName','maxlength')">
+              {{'Max length is 25'|translate}}</small>
+          </div>
+          <!-- <span class="text-danger" *ngIf="(name.touched || submitted) && name.errors?.['required']">
+            {{'PassengerName is required'|translate}}
+          </span> -->
+        </div>
+        <div class="col-md-7">
+          <mat-form-field class="full-width">
+            <input formControlName="PassengerPhone" type="number" matInput placeholder="{{'Enter phone Number'|translate}}">
+          </mat-form-field>
+          <span class="text-danger" *ngIf="(phone.touched || submitted) && phone.errors?.['required']">
+            {{'PassengerPhone is required'|translate}}
+          </span>
+        </div>
+
+        <!-- <div class="row"> -->
         <div class="col-sm-7">
           <mat-form-field class="full-width">
-            <input  formControlName="PassengerAge" matInput placeholder="{{'Enter Your Age'|translate}}">
+            <input formControlName="PassengerAge" type="number"matInput placeholder="{{'Enter Your Age'|translate}}">
           </mat-form-field>
-          <span class="text-danger"
-                              *ngIf="(age.touched || submitted) && age.errors?.['required']">
-                              PassengerAge is required
-                          </span>
+          <div *ngIf="isInValidAndTouched('PassengerAge')">
+            <small class="form-text text-danger" *ngIf="isControlHasError('PassengerAge','required')">
+              {{'PassengerAge is required'|translate}} </small>
+            <small class="form-text text-danger" *ngIf="isControlHasError('PassengerAge','min')">
+              {{'Min Age is 18'|translate}}</small>
+            <small class="form-text text-danger" *ngIf="isControlHasError('PassengerAge','max')">
+              {{'Max Age is 100'|translate}}</small>
+          </div>
+          <!-- <span class="text-danger" *ngIf="(age.touched || submitted) && age.errors?.['required']">
+            {{'PassengerAge is required'|translate}} </span> -->
         </div>
         <!-- </div> -->
         <div class="col-md-7">
-        <mat-form-field class="full-width">
-          <input type="number" formControlName="TicketsNumber" matInput placeholder="{{'NumberOfTickets'|translate}}">
-        </mat-form-field>
-        <span class="text-danger"
-        *ngIf="(num.touched || submitted) && num.errors?.['required']">
-                              TicketsNumber is required
-                          </span>
+          <mat-form-field class="full-width">
+            <input type="number" formControlName="TicketsNumber" matInput placeholder="{{'NumberOfTickets'|translate}}">
+          </mat-form-field>
+          <div *ngIf="isInValidAndTouched('TicketsNumber')">
+            <small class="form-text text-danger" *ngIf="isControlHasError('TicketsNumber','required')">
+              {{'TicketsNumber is required'|translate}} </small>
+            <small class="form-text text-danger" *ngIf="isControlHasError('TicketsNumber','min')">
+              {{'Min Number of Tickets is 1'|translate}}</small>
+            <small class="form-text text-danger" *ngIf="isControlHasError('TicketsNumber','max')">
+              {{'Max Number of Tickets is 10'|translate}}</small>
+          </div>
+          <!-- <span class="text-danger" *ngIf="(num.touched || submitted) && num.errors?.['required']">
+            {{'TicketsNumber is required'|translate}} </span> -->
+        </div>
+
       </div>
-     
-    </div>
-    
-    <mat-chip-list aria-label="Fish selection">
-      <mat-chip color="accent" selected>{{'Flight Number'|translate}} : {{flight.id}}</mat-chip>
-      <mat-chip color="accent" selected>{{'Ticket Cost'|translate}} : {{flight.fare}} </mat-chip>
-        </mat-chip-list>
+
+      <mat-chip-list aria-label="Fish selection">
+        <mat-chip color="accent" selected>{{'Flight Number'|translate}} : {{flight.id}}</mat-chip>
+        <mat-chip color="accent" selected>{{'Ticket Cost'|translate}} : {{flight.fare|currency}} </mat-chip>
+      </mat-chip-list>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button class="background" type="submit">{{'Book Now'|translate}}</button>

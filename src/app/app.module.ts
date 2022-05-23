@@ -9,9 +9,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-  
+
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
@@ -20,11 +19,17 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatBadgeModule } from '@angular/material/badge';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    HeaderComponent,
+    SidenavComponent,
     
   ],
   imports: [
@@ -55,7 +60,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatDividerModule,
     MatBadgeModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule
    
     
   ],

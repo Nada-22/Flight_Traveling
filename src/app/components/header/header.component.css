@@ -1,7 +1,10 @@
-/* .example-form-field {
-    width: 200px;
-  } */
-  .example-spacer {
+mat-toolbar
+{
+  background-color: #6fada0;
+  color: black;
+
+}
+.example-spacer {
     flex: 1 1 auto;
   }
   .selectform{
@@ -13,4 +16,3 @@
     background-color: #6fada0;
    
   }
-

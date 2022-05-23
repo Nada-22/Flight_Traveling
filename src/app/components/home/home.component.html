@@ -1,29 +1,32 @@
-<h1 style="text-align: center;" class="mt-3 pt-5">{{'I want to Travel'|translate }}</h1>
-<div class="d-flex justify-content-center p-5">
-
-  
-  <div class="selectform">
-    <mat-form-field class="example-form-field" style=" margin-right: 20px; margin-left: 20px;"  appearance="fill">
+<!-- <h1 style="text-align: center;" class="mt-3 pt-5">{{'I want to Travel'|translate }}</h1> -->
+<div class="d-flex justify-content-center p-5 col-12">
+  <div class="selectform" [formGroup]="formFlight">
+    <mat-form-field class="example-form-field " style=" margin-right: 20px; margin-left: 20px;"  appearance="fill">
       <mat-label>{{'From'|translate}}</mat-label>
-      <input #inputfrom matInput type="text" >
-      <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''"> -->
-      <!-- <mat-icon>close</mat-icon> -->
-    <!-- </button> -->
-  </mat-form-field>
+      <input #inputfrom formControlName="ownCountry" matInput type="text" >  
+      <div *ngIf="isInValidAndTouched('ownCountry')">
+        <small class="form-text text-danger" *ngIf="isControlHasError('ownCountry','required')">
+          {{'ownCountry is required'|translate}} </small>
+        <small class="form-text text-danger" *ngIf="isControlHasError('ownCountry','minlength')">
+          {{'Min length is 3'|translate}}</small>
+        <small class="form-text text-danger" *ngIf="isControlHasError('ownCountry','maxlength')">
+          {{'Max length is 25'|translate}}</small>
+      </div>
+    </mat-form-field>
   <mat-form-field class="example-form-field" appearance="fill">
     <mat-label>{{'To'|translate}}</mat-label>
-    <input #inputto matInput type="text" >
-    <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''"> -->
-      
-    <!-- </button> -->
+    <input #inputto formControlName="reachedCountry" matInput type="text" >
+    <div *ngIf="isInValidAndTouched('reachedCountry')">
+      <small class="form-text text-danger" *ngIf="isControlHasError('reachedCountry','required')">
+        {{'reachedCountry is required'|translate}} </small>
+      <small class="form-text text-danger" *ngIf="isControlHasError('reachedCountry','minlength')">
+        {{'Min length is 3'|translate}}</small>
+      <small class="form-text text-danger" *ngIf="isControlHasError('reachedCountry','maxlength')">
+        {{'Max length is 25'|translate}}</small>
+    </div>
   </mat-form-field>
-  <button mat-raised-button color="primary" style="margin-left: 20px;" 
+  <button mat-raised-button color="primary" style="margin-left: 20px;" [disabled]="!formFlight.valid"
   routerLink="/flights/{{inputfrom.value}}/{{inputto.value}}">{{'Search!'|translate}}</button>
   </div>
 </div>
 
-
- <!-- <mat-form-field class="">
-  <mat-label>where</mat-label>
-  <input matInput placeholder="Ex. Hardik">
-</mat-form-field> -->

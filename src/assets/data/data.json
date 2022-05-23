@@ -14,3 +14,4 @@
     {"id":47,"from" : "Italy", "to": "Japan", "fare" : 500 ,"departure":"4am","arreval":"9am"},
     {"id":40,"from" : "Egypt","to":"Sudan", "fare" : 500 ,"departure":"2am","arreval":"7am"}
   ]
+  

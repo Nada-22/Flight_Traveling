@@ -2,7 +2,7 @@
 		"text": "This is a simple demonstration app for ngx-translate",
 		"title": "Translation demo",
         "i": "i",
-        "want": "xxxx",
+        "want": "want",
         "travel": "travel",
         "I want to Travel": "I want to Travel :",
         "home": "home",
@@ -24,7 +24,26 @@
         "Enter your Email": "Enter your Email",
         "NumberOfTickets": "NumberOfTickets",
         "Book Now": "Book Now",
-        "Flight Number": "Flight Number"
+        "Flight Number": "Flight Number",
+        "PassengerName is required": "PassengerName is required",
+        "Min length is 3": "Min length is 3",
+        "Max length is 25": "Max length is 25",
+
+        "PassengerPhone is required": "PassengerPhone is required",
+
+        "PassengerAge is required": "PassengerAge is required",
+        "Min Age is 18": "Min Age is 18",
+        "Max Age is 100": "Max Age is 100",
+
+        "PassengerEmail is required": "PassengerEmail is required",
+
+        "TicketsNumber is required": "TicketsNumber is required",
+        "Min Number of Tickets is 1": "Min Number of Tickets is 1",
+        "Max Number of Tickets is 10": "Max Number of Tickets is 10",
+
+        "reachedCountry is required": "reachedCountry is required",
+        "ownCountry is required": "ownCountry is required"
+
         
 	}
 

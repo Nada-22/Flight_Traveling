@@ -21,10 +21,10 @@ export class PurchasingTicketComponent implements OnInit {
   constructor(private fb: FormBuilder, private customValidator: CustomvalidatorService
     ,private _router:ActivatedRoute, private translate: TranslateService) {
     this.Purchasingticketformgroup=fb.group({
-      PassengerName:['',[Validators.required,Validators.minLength(3)],this.customValidator.userNameValidator.bind(this.customValidator)],
-      PassengerPhone:['',[Validators.required]],
-      PassengerAge:['',[Validators.required]],
-      TicketsNumber:['',[Validators.required]]
+      PassengerName:['',[Validators.required,Validators.minLength(3),Validators.maxLength(25)]],
+      PassengerPhone:['',[Validators.required, Validators.minLength(11), Validators.maxLength(11)]],
+      PassengerAge:['',[Validators.required, Validators.min(18), Validators.max(100)]],
+      TicketsNumber:['',[Validators.required, Validators.min(1), Validators.max(10)]]
     })
 
    }
@@ -40,19 +40,20 @@ export class PurchasingTicketComponent implements OnInit {
      })
     this.getPassengerinfo();
   }
-  get name() {
-    return this.Purchasingticketformgroup.controls['PassengerName'];
-  }
+ 
   get phone() {
     return this.Purchasingticketformgroup.controls['PassengerPhone'];
   }
 
-  get age() {
-    return this.Purchasingticketformgroup.controls['PassengerAge'];
+
+   isValidControl(name: string): boolean {
+    return this.Purchasingticketformgroup.controls[name].valid;
   }
-  
-   get num() {
-    return this.Purchasingticketformgroup.controls['TicketsNumber'];
+  isInValidAndTouched(name: string): boolean {
+    return this.Purchasingticketformgroup.controls[name].invalid && (this.Purchasingticketformgroup.controls[name].dirty || this.Purchasingticketformgroup.controls[name].touched);
+  }
+  isControlHasError(name: string, error: string): boolean {
+    return this.Purchasingticketformgroup.controls[name].invalid && this.Purchasingticketformgroup.controls[name].errors?.[error];
   }
   purchTicket() {
     localStorage.setItem('user', JSON.stringify(this.Purchasingticketformgroup.value));

@@ -24,9 +24,29 @@
         "Enter your Email": "أدخل بريدك الإلكتروني",
         "NumberOfTickets": "عدد التذاكر",
         "Book Now": "حجز الآن",
-        "Flight Number": "رقم الرحلة"
+        "Flight Number": "رقم الرحلة",
+        "PassengerName is required": "اسم الراكب مطلوب",
+        "Min length is 3": "الحد الأدنى  3",
+        "Max length is 25": "الحد الأقصى 25",
 
-        
+
+        "PassengerPhone is required": "رقم الهاتف مطلوب",
+
+        "PassengerAge is required": "عمر الراكب مطلوب",
+        "Min Age is 18": "العمر الأدنى 18",
+        "Max Age is 100": "العمر الأقصى 100",
+
+        "PassengerEmail is required": "بريد الكتروني الراكب مطلوب",
+
+        "TicketsNumber is required": "عدد التذاكر مطلوب",
+        "Min Number of Tickets is 1": "الحد الأدنى للتذاكر 1",
+        "Max Number of Tickets is 10": "الحد الأقصى للتذاكر 10",
+
+        "reachedCountry is required": "الدولة المستهدفة مطلوبة",
+        "ownCountry is required": "الدولة الخاصة بك مطلوبة"
+      
+
+
 
 	}
 
