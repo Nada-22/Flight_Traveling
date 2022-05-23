@@ -7,11 +7,24 @@
         "I want to Travel": "I want to Travel :",
         "home": "home",
         "about": "about",
-        "book": "book",
+        "BOOK": "book",
         "help": "help",
         "contact": "contact",
         "Search!": "search",
         "From": "from",
-        "To": "to"
+        "To": "to",
+        "Avilable Flights": "Avilable Flights",
+        "Flight from": "Flight from",
+        "Arreval at": "Arreval at",
+        "Ticket Cost": "Ticket Cost:",
+        "Passenger Information": "Passenger Information",
+        "Enter your name": "Enter your name",
+        "Enter phone Number": "Enter phone Number",
+        "Enter Your Age": "Enter Your Age",
+        "Enter your Email": "Enter your Email",
+        "NumberOfTickets": "NumberOfTickets",
+        "Book Now": "Book Now",
+        "Flight Number": "Flight Number"
+        
 	}
 

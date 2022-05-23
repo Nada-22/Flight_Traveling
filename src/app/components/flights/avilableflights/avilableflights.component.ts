@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import data from '../../../../assets/data/data.json';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-avilableflights',
@@ -17,8 +18,14 @@ export class AvilableflightsComponent implements OnInit {
   public countryList:{from:string,to:string, fare:string}[] = data;
 
  
-  constructor(private _router:ActivatedRoute) { }
+  constructor(private _router: ActivatedRoute, private translate: TranslateService) { 
+    // translate.setDefaultLang('en');
+    // translate.use('en');
 
+  }
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
   ngOnInit(): void {
     this._router.paramMap.subscribe(params => {
      this.location1 = params.get('from');

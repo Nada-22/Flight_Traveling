@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { AvilableflightsComponent } from './avilableflights/avilableflights.component';
 import { Routes, RouterModule } from '@angular/router';
 import {MatTableModule} from '@angular/material/table';
-import {MatCardModule} from '@angular/material/card';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { PurchasingTicketComponent } from './purchasing-ticket/purchasing-ticket.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -25,7 +28,16 @@ export const routes: Routes = [
     PurchasingTicketComponent
   ],
   imports: [
-    CommonModule, RouterModule.forChild(routes),
+    CommonModule,
+    RouterModule.forChild(routes),
+    HttpClientModule,
+    TranslateModule.forChild({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    }),
     MatTableModule,
     MatCardModule,
     MatButtonModule,
@@ -38,3 +50,6 @@ export const routes: Routes = [
   ]
 })
 export class FlightsModule { }
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

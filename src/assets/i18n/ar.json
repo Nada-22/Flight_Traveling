@@ -8,12 +8,25 @@
         "home": "الرئيسية",
         "about": "عن",
         "help": "مساعدة",
-        "book":"حجز",
+        "BOOK":"حجز",
         "contact": "اتصل بنا",
         "Search!": "بحث",
         "From": "من",
-        "To": "إلى"
-    
+        "To": "إلى",
+        "Avilable Flights": "الرحلات المتاحة",
+        "Flight from": "رحلة من",
+        "Arreval at": "موعد الوصول",
+        "Ticket Cost": "تكلفة التذكرة",
+        "Passenger Information": "معلومات الراكب",
+        "Enter your name": "أدخل اسمك",
+        "Enter phone Number": "أدخل رقم الهاتف",
+        "Enter Your Age": "أدخل عمرك",
+        "Enter your Email": "أدخل بريدك الإلكتروني",
+        "NumberOfTickets": "عدد التذاكر",
+        "Book Now": "حجز الآن",
+        "Flight Number": "رقم الرحلة"
+
+        
 
 	}
 

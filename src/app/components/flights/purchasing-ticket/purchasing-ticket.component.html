@@ -1,7 +1,7 @@
 <form [formGroup]="Purchasingticketformgroup" (ngSubmit)="purchTicket()" class="form-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Passenger Information</mat-card-title>
+      <mat-card-title>{{'Passenger Information'|translate}}</mat-card-title>
     </mat-card-header>
     
     <mat-card-content>
@@ -9,7 +9,7 @@
         <div class="col-md-7">
           <mat-form-field class="full-width">
           
-            <input formControlName="PassengerName" matInput placeholder="Enter your name">
+            <input formControlName="PassengerName" matInput placeholder="{{'Enter your name'|translate}}">
           </mat-form-field>
           <span class="text-danger"
           *ngIf="(name.touched || submitted) && name.errors?.['required']">
@@ -18,7 +18,7 @@
       </div>
       <div class="col-md-7">
         <mat-form-field class="full-width">
-          <input  formControlName="PassengerPhone" matInput placeholder="Enter phone Number">
+          <input  formControlName="PassengerPhone" matInput placeholder="{{'Enter phone Number'|translate}}">
         </mat-form-field>
         <span class="text-danger"
         *ngIf="(phone.touched || submitted) && phone.errors?.['required']">
@@ -29,7 +29,7 @@
     <!-- <div class="row"> -->
         <div class="col-sm-7">
           <mat-form-field class="full-width">
-            <input  formControlName="PassengerAge" matInput placeholder="Enter Your Age">
+            <input  formControlName="PassengerAge" matInput placeholder="{{'Enter Your Age'|translate}}">
           </mat-form-field>
           <span class="text-danger"
                               *ngIf="(age.touched || submitted) && age.errors?.['required']">
@@ -39,7 +39,7 @@
         <!-- </div> -->
         <div class="col-md-7">
         <mat-form-field class="full-width">
-          <input type="number" formControlName="TicketsNumber" matInput placeholder="NumberOfTickets">
+          <input type="number" formControlName="TicketsNumber" matInput placeholder="{{'NumberOfTickets'|translate}}">
         </mat-form-field>
         <span class="text-danger"
         *ngIf="(num.touched || submitted) && num.errors?.['required']">
@@ -50,12 +50,12 @@
     </div>
     
     <mat-chip-list aria-label="Fish selection">
-      <mat-chip color="primary" selected>Flight Number : {{flight.id}}</mat-chip>
-      <mat-chip color="primary" selected>Ticket Cost : {{flight.fare}} </mat-chip>
+      <mat-chip color="accent" selected>{{'Flight Number'|translate}} : {{flight.id}}</mat-chip>
+      <mat-chip color="accent" selected>{{'Ticket Cost'|translate}} : {{flight.fare}} </mat-chip>
         </mat-chip-list>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="accent" type="submit">Save</button>
+      <button mat-raised-button class="background" type="submit">{{'Book Now'|translate}}</button>
     </mat-card-actions>
   </mat-card>
 </form>

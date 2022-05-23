@@ -1,13 +1,12 @@
-
-  <h1 style="text-align:center">Avilable Flights</h1>
+ <h1 style="text-align:center">{{'Avilable Flights'| translate }}</h1>
   <mat-card style="text-align:center" class="m-5" *ngFor="let flight of flights ">
-    <mat-card-title>Flight from {{flight.from}} To {{flight.to}} at:{{flight.departure}} </mat-card-title>
-    <mat-card-subtitle> Arreval at: {{flight.arreval}} </mat-card-subtitle>
-    <mat-card-subtitle> Ticket Cost: {{flight.fare|currency}} </mat-card-subtitle>
+    <mat-card-title>{{'Flight from'|translate}} {{flight.from}} To {{flight.to}} at:{{flight.departure}} </mat-card-title>
+    <mat-card-subtitle> {{'Arreval at'|translate}} :{{flight.arreval}} </mat-card-subtitle>
+    <mat-card-subtitle> {{'Ticket Cost'|translate}} :{{flight.fare|currency}} </mat-card-subtitle>
     <mat-card-subtitle></mat-card-subtitle>
 
     <mat-card-actions align="end">
-      <button class="background text-white" routerLink="/flights/book/{{flight.id}}" mat-button>BOOK</button>
+      <button class="background text-white" routerLink="/flights/book/{{flight.id}}" mat-button>{{'BOOK'|translate}}</button>
     </mat-card-actions>
   </mat-card>
   <!-- <table mat-table [dataSource]="flights" class="mat-elevation-z8">

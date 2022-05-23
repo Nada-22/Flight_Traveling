@@ -1,10 +1,11 @@
-import { Passenger } from './../../models/passenger';
+import { Passenger } from '../../../models/passenger';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CustomvalidatorService } from 'src/app/services/customvalidator.service';
 import data from '../../../../assets/data/data.json';
 import { ActivatedRoute } from '@angular/router';
-import { Flight } from '../../models/flight';
+import { Flight } from '../../../models/flight';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-purchasing-ticket',
@@ -18,7 +19,7 @@ export class PurchasingTicketComponent implements OnInit {
   flight= new Flight();
   Purchasingticketformgroup:FormGroup;
   constructor(private fb: FormBuilder, private customValidator: CustomvalidatorService
-    ,private _router:ActivatedRoute) {
+    ,private _router:ActivatedRoute, private translate: TranslateService) {
     this.Purchasingticketformgroup=fb.group({
       PassengerName:['',[Validators.required,Validators.minLength(3)],this.customValidator.userNameValidator.bind(this.customValidator)],
       PassengerPhone:['',[Validators.required]],
@@ -27,7 +28,9 @@ export class PurchasingTicketComponent implements OnInit {
     })
 
    }
-
+   useLanguage(language: string): void {
+    this.translate.use(language);
+}
   ngOnInit(): void {
     this._router.paramMap.subscribe(params => {
       this.flightId = params.get('id');
