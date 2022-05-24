@@ -1,15 +1,12 @@
 <mat-toolbar color="" class="background text-white">
     <mat-toolbar-row>
   
-        <span class="text-white">Flight Traveling</span>
+        <span class="text-white">{{'Flight Traveling'|translate}}</span>
       <span class="example-spacer"></span>
-      <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button> -->
-      <button mat-stroked-button [matMenuTriggerFor]="menu" class="background" color="accent">select Language</button>
+      <button mat-stroked-button [matMenuTriggerFor]="menu" class="background" color="accent">{{'select Language'|translate}}</button>
   <mat-menu #menu="matMenu">
-    <button  (click)="useLanguage('en')" mat-menu-item>English</button>
-    <button class="selectlanguage" (click)="useLanguage('ar')" mat-menu-item>Arabic</button>
+    <button  (click)="useLanguage('en')" mat-menu-item>{{'English'|translate}}</button>
+    <button class="selectlanguage" (click)="useLanguage('ar')" mat-menu-item>{{'Arabic'|translate}}</button>
   </mat-menu>
     </mat-toolbar-row>
   </mat-toolbar>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidationService } from 'src/app/services/validation.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class HomeComponent implements OnInit {
   formFlight = new FormGroup({});
 
-  constructor(private translate: TranslateService, private _formBuilder: FormBuilder) {
-    // translate.setDefaultLang('en');
-    // translate.use('en');
-  }
+  constructor(private translate: TranslateService, private _formBuilder: FormBuilder,
+             private _validation: ValidationService) { }
  
 
   ngOnInit(): void {
@@ -24,12 +23,12 @@ export class HomeComponent implements OnInit {
   }
 
   isValidControl(name: string): boolean {
-    return this.formFlight.controls[name].valid;
+    return this._validation.isValidControl(name,this.formFlight);
   }
   isInValidAndTouched(name: string): boolean {
-    return this.formFlight.controls[name].invalid && (this.formFlight.controls[name].dirty || this.formFlight.controls[name].touched);
+    return this._validation.isInValidAndTouched(name,this.formFlight);
   }
   isControlHasError(name: string, error: string): boolean {
-    return this.formFlight.controls[name].invalid && this.formFlight.controls[name].errors?.[error];
+    return this._validation.isControlHasError(name, error,this.formFlight);
   }
 }

@@ -1,4 +1,9 @@
  {
+     "your easy way to fly": "your easy way to fly",
+     "Flight Traveling": "Flight Traveling",
+     "select Language": "select Language",
+     "English": "English",
+     "Arabic": "Arabic",
 		"text": "This is a simple demonstration app for ngx-translate",
 		"title": "Translation demo",
         "i": "i",
@@ -36,6 +41,8 @@
         "Max Age is 100": "Max Age is 100",
 
         "PassengerEmail is required": "PassengerEmail is required",
+        "Invalid Email": "Invalid Email",
+        "Required Email": "Required Email",
 
         "TicketsNumber is required": "TicketsNumber is required",
         "Min Number of Tickets is 1": "Min Number of Tickets is 1",

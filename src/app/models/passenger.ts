@@ -4,6 +4,8 @@ export class Passenger{
     PassengerPhone!:string;
     PassengerAge!:number;
     TripID!:string;
-    TripFare!:number;
+    TripFare!: number;
+    PassengerEmail!: string;
+    FlightId!: number;
 
 }

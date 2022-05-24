@@ -1,4 +1,9 @@
  {
+     "your easy way to fly": "طريقك الاسهل للطيران",
+     "Flight Traveling": "رحلات طيران",
+     "select Language": "اختر اللغة",
+     "English": "الانجليزية",
+     "Arabic": "العربية",
 		"text": "المحتوي",
 		"title": "العنوان",
         "i": "انا",
@@ -37,6 +42,10 @@
         "Max Age is 100": "العمر الأقصى 100",
 
         "PassengerEmail is required": "بريد الكتروني الراكب مطلوب",
+        "PassengerEmail is invalid": "بريد الكتروني الراكب غير صالح",
+        "Invalid Email": "بريد الكتروني غير صالح",
+        "Required Email": "بريد الكتروني مطلوب",
+        
 
         "TicketsNumber is required": "عدد التذاكر مطلوب",
         "Min Number of Tickets is 1": "الحد الأدنى للتذاكر 1",
